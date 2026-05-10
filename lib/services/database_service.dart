@@ -26,8 +26,12 @@ class DatabaseService {
     TransactionModel(id: 't2', cardId: 'c2', storeName: 'Coles', category: 'Groceries', amount: 44.20, date: DateTime.now().subtract(const Duration(days: 1)), rewardValue: 2.10),
   ];
 
-  List<RewardCardModel> getCards(String userId) => _cards.where((c) => c.userId == userId).toList();
+  List<RewardCardModel> getCards(String userId) =>
+    _cards.where((c) => c.userId == userId).toList();
 
-  void addCard(RewardCardModel card) => _cards.add(card);
-  void deleteCard(String id) => _cards.removeWhere((c) => c.id == id);
+List<RewardCardModel> getDefaultCards() => _cards;
+
+void addCard(RewardCardModel card) => _cards.add(card);
+
+void deleteCard(String id) => _cards.removeWhere((c) => c.id == id);
 }
