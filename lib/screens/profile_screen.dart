@@ -8,6 +8,7 @@ import 'settings_screens.dart';
 import 'notification_settings_screen.dart';
 import 'location_permission_screen.dart';
 import 'privacy_security_screen.dart';
+import 'users_screen.dart';
 
 
 class ProfileScreen extends StatefulWidget {
@@ -73,10 +74,30 @@ _Setting(
 ),
 
     const SizedBox(height: 18),
-    CustomButton(text: 'Log Out', danger: true, onPressed: () => Navigator.pushNamedAndRemoveUntil(context, AppRoutes.splash, (_) => false)),
-  ]);
-  void _editProfile()=>showModalBottomSheet(context: context, isScrollControlled: true, backgroundColor: AppColors.bg2, shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28))), builder: (_)=>Padding(padding: EdgeInsets.fromLTRB(24,24,24,MediaQuery.of(context).viewInsets.bottom+24), child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children:[const Text('Edit Profile', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900)), const SizedBox(height:18), CustomInput(label:'Full Name', hint:'Alex Johnson', controller:name), CustomInput(label:'Email', hint:'you@email.com', controller:email), CustomButton(text:'Save Changes', onPressed:(){setState((){widget.user.name=name.text; widget.user.email=email.text;}); widget.onUserChanged(); Navigator.pop(context);})])));
-}
+
+ElevatedButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => const UsersScreen(),
+      ),
+    );
+  },
+  child: const Text('View Users'),
+),
+
+const SizedBox(height: 12),
+
+CustomButton(
+  text: 'Log Out',
+  danger: true,
+  onPressed: () => Navigator.pushNamedAndRemoveUntil(
+    context,
+    AppRoutes.splash,
+    (_) => false,
+  ),
+),
 class _Stat extends StatelessWidget { const _Stat({required this.value, required this.label}); final String value,label; @override Widget build(BuildContext context)=>Expanded(child: Container(padding: const EdgeInsets.all(16), decoration: BoxDecoration(color: AppColors.bg2, borderRadius: BorderRadius.circular(18)), child: Column(children:[Text(value, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900)), Text(label, style: const TextStyle(color: AppColors.text2, fontSize: 12))]))); }
 class _Section extends StatelessWidget { const _Section({required this.label}); final String label; @override Widget build(BuildContext context)=>Padding(padding: const EdgeInsets.only(bottom: 8, left: 4), child: Text(label.toUpperCase(), style: const TextStyle(color: AppColors.text3, fontSize: 12, fontWeight: FontWeight.w900, letterSpacing: .8))); }
 class _Setting extends StatelessWidget { const _Setting({required this.icon, required this.label, required this.onTap}); final String icon,label; final VoidCallback onTap; @override Widget build(BuildContext context)=>Container(margin: const EdgeInsets.only(bottom: 2), child: ListTile(onTap: onTap, tileColor: AppColors.bg2, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)), leading: Text(icon, style: const TextStyle(fontSize: 24)), title: Text(label, style: const TextStyle(fontWeight: FontWeight.w700)), trailing: const Icon(Icons.chevron_right, color: AppColors.text3))); }
