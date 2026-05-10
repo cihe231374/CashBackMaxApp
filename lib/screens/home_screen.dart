@@ -42,8 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
 user = UserModel(
   id: firebaseUser?.uid ?? 'u1',
-  name: firebaseUser?.displayName ?? 'Alex Johnson',
-  email: firebaseUser?.email ?? 'alex@email.com',
+  name: firebaseUser?.displayName ??
+      firebaseUser?.email?.split('@').first ??
+      'User',
+  email: firebaseUser?.email ?? '',
 );
     cards = db.getCards(user.id);
     if (cards.isEmpty) {

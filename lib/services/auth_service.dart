@@ -17,6 +17,8 @@ class AuthService {
       email: email.trim(),
       password: password.trim(),
     );
+    await credential.user!.updateDisplayName(name.trim());
+    await credential.user!.reload();
 
     await _db.collection('users').doc(credential.user!.uid).set({
       'uid': credential.user!.uid,
