@@ -1,0 +1,30 @@
+name: cashback_rewards_points_maximiser
+description: High fidelity Cashback and Rewards Points Maximiser mobile app.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  geolocator: ^13.0.2
+  firebase_core: ^4.7.0
+  firebase_auth: ^6.4.0
+  cloud_firestore: ^6.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/login_hero.png
+    - assets/images/rewards_card.png
+    - assets/images/app_logo.png
+    - assets/images/signup_hero.png

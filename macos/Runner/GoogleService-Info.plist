@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>519380064836-ut2sd4uk2jfdbjg844i5quh6mgrpgp51.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.519380064836-ut2sd4uk2jfdbjg844i5quh6mgrpgp51</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB-RfgKiVXUfQKp3m81ZN7HQprPWwI4rJg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>519380064836</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.cashbackRewardsPointsMaximiser</string>
+	<key>PROJECT_ID</key>
+	<string>cashbackmax-126eb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cashbackmax-126eb.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:519380064836:ios:477fe9bcd51280b0feba11</string>
+</dict>
+</plist>
