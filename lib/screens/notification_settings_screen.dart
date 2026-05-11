@@ -162,7 +162,7 @@ class _NotificationSettingsScreenState
     required ValueChanged<bool> onChanged,
   }) {
     return SwitchListTile(
-      activeColor: const Color(0xFF6C63FF),
+      activeThumbColor: const Color(0xFF6C63FF),
       secondary: Container(
         width: 42,
         height: 42,

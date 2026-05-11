@@ -218,7 +218,7 @@ class _PrivacySecurityScreenState extends State<PrivacySecurityScreen> {
     required ValueChanged<bool> onChanged,
   }) {
     return SwitchListTile(
-      activeColor: const Color(0xFF6C63FF),
+      activeThumbColor: const Color(0xFF6C63FF),
       secondary: _iconBox(icon),
       title: Text(
         title,
