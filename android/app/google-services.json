@@ -1,43 +1,26 @@
 {
   "project_info": {
-    "project_number": "519380064836",
-    "project_id": "cashbackmax-126eb",
-    "storage_bucket": "cashbackmax-126eb.firebasestorage.app"
+    "project_number": "918477263203",
+    "project_id": "cashbackmax-d17de",
+    "storage_bucket": "cashbackmax-d17de.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:519380064836:android:79421634381ef16cfeba11",
+        "mobilesdk_app_id": "1:918477263203:android:cde6ba53ee1a69db1b0356",
         "android_client_info": {
           "package_name": "com.example.cashback_rewards_points_maximiser"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "519380064836-b1219alime0qe1ub1qgpc26n04lu3mkj.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAabiVwodPIpBJjjpM75rD_uL-No3XRvYk"
+          "current_key": "AIzaSyBl7q8ZLb25snLOcS4htNLu2dF4uj9HWAU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "519380064836-b1219alime0qe1ub1qgpc26n04lu3mkj.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "519380064836-597fisq41v4a7io574aqmar3ut4mdkjs.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.radra.cashbackRewardsPointsMaximiser"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
