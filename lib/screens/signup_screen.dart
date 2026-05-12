@@ -214,24 +214,43 @@ class _SignupScreenState extends State<SignupScreen> {
                   const SizedBox(height: 18),
 
                   Row(
-                    children: [
-                      Expanded(
-                        child: _SocialSignupButton(
-                          icon: Icons.g_mobiledata,
-                          label: 'Google',
-                          onTap: () => _showSocialSignup('Google'),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _SocialSignupButton(
-                          icon: Icons.apple,
-                          label: 'Apple',
-                          onTap: () => _showSocialSignup('Apple'),
-                        ),
-                      ),
-                    ],
-                  ),
+  children: [
+    Expanded(
+      child: _SocialSignupButton(
+        icon: Icons.g_mobiledata,
+        label: 'Google',
+        onTap: () async {
+          final result = await auth.signInWithGoogle();
+
+          if (result != null && context.mounted) {
+            Navigator.pushReplacementNamed(
+              context,
+              AppRoutes.home,
+            );
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text(
+                  'Google sign-in failed or was cancelled',
+                ),
+              ),
+            );
+          }
+        },
+      ),
+    ),
+
+    const SizedBox(width: 12),
+
+    Expanded(
+      child: _SocialSignupButton(
+        icon: Icons.apple,
+        label: 'Apple',
+        onTap: () => _showSocialSignup('Apple'),
+      ),
+    ),
+  ],
+),
 
                   const SizedBox(height: 22),
 

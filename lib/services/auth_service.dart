@@ -7,41 +7,64 @@ class AuthService {
 
   User? get currentUser => _auth.currentUser;
 
-  // SIGN UP
   Future<UserCredential> signup({
     required String name,
     required String email,
     required String password,
   }) async {
     final credential = await _auth.createUserWithEmailAndPassword(
-      email: email.trim(),
-      password: password.trim(),
+      email: email,
+      password: password,
     );
-    await credential.user!.updateDisplayName(name.trim());
-    await credential.user!.reload();
 
     await _db.collection('users').doc(credential.user!.uid).set({
       'uid': credential.user!.uid,
-      'name': name.trim(),
-      'email': email.trim(),
-      'createdAt': FieldValue.serverTimestamp(),
+      'name': name,
+      'email': email,
     });
 
     return credential;
   }
 
-  // LOGIN
   Future<UserCredential> login({
     required String email,
     required String password,
-  }) {
-    return _auth.signInWithEmailAndPassword(
-      email: email.trim(),
-      password: password.trim(),
+  }) async {
+    return await _auth.signInWithEmailAndPassword(
+      email: email,
+      password: password,
     );
   }
 
-  // LOGOUT
+  Future<Map<String, dynamic>?> getUserData() async {
+    final user = _auth.currentUser;
+    if (user == null) return null;
+
+    final doc = await _db.collection('users').doc(user.uid).get();
+    return doc.data();
+  }
+
+  Future<UserCredential?> signInWithGoogle() async {
+    try {
+      final googleProvider = GoogleAuthProvider();
+      googleProvider.addScope('email');
+      googleProvider.addScope('profile');
+
+      final userCredential = await _auth.signInWithPopup(googleProvider);
+
+      await _db.collection('users').doc(userCredential.user!.uid).set({
+        'uid': userCredential.user!.uid,
+        'name': userCredential.user!.displayName ?? 'Google User',
+        'email': userCredential.user!.email ?? '',
+      }, SetOptions(merge: true));
+
+      return userCredential;
+    } catch (e) {
+      print('Google sign-in error: $e');
+      return null;
+    }
+  }
+
   Future<void> logout() async {
     await _auth.signOut();
   }

@@ -245,11 +245,23 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomButton(
                 text: 'Add & Continue',
                 onPressed: () {
-                  Navigator.pop(context);
-                  Navigator.pushReplacementNamed(
-                      context, AppRoutes.home);
-                },
-              ),
+             if (emailController.text.trim().isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please enter your email')),
+      );
+      return;
+    }
+
+    Navigator.of(context).pop();
+
+    Future.delayed(const Duration(milliseconds: 200), () {
+      Navigator.pushReplacementNamed(
+        context,
+        AppRoutes.home,
+      );
+    });
+  },
+),
 
               TextButton(
                 onPressed: () => Navigator.pop(context),
@@ -352,13 +364,21 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(
               children: [
                 Expanded(
-                  child: _SocialButton(
-                    icon: Icons.g_mobiledata,
-                    label: 'Google',
-                    onTap: () =>
-                        _showSocialLogin(context, 'Google'),
-                  ),
-                ),
+  child: _SocialButton(
+    icon: Icons.g_mobiledata,
+    label: 'Google',
+    onTap: () async {
+      final result = await auth.signInWithGoogle();
+
+      if (result != null && context.mounted) {
+        Navigator.pushReplacementNamed(
+          context,
+          AppRoutes.home,
+        );
+      }
+    },
+  ),
+),
                 const SizedBox(width: 10),
                 Expanded(
                   child: _SocialButton(

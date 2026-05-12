@@ -36,23 +36,42 @@ class _HomeScreenState extends State<HomeScreen> {
   bool detecting = false;
 
   @override
-  void initState() {
-    super.initState();
-    final firebaseUser = auth.currentUser;
+void initState() {
+  super.initState();
 
-user = UserModel(
-  id: firebaseUser?.uid ?? 'u1',
-  name: firebaseUser?.displayName ??
-      firebaseUser?.email?.split('@').first ??
-      'User',
-  email: firebaseUser?.email ?? '',
-);
-    cards = db.getCards(user.id);
-    if (cards.isEmpty) {
-  cards = db.getDefaultCards();
-}
-    WidgetsBinding.instance.addPostFrameCallback((_) => detectAndRecommend(showMessage: false));
+  final firebaseUser = auth.currentUser;
+
+  user = UserModel(
+    id: firebaseUser?.uid ?? 'u1',
+    name: firebaseUser?.email?.split('@').first ?? 'User',
+    email: firebaseUser?.email ?? '',
+  );
+
+  cards = db.getCards(user.id);
+
+  if (cards.isEmpty) {
+    cards = db.getDefaultCards();
   }
+
+  loadUserName();
+
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    detectAndRecommend(showMessage: false);
+  });
+}
+Future<void> loadUserName() async {
+  final data = await auth.getUserData();
+
+  if (data != null && mounted) {
+    setState(() {
+      user = UserModel(
+        id: data['uid'] ?? user.id,
+        name: data['name'] ?? user.name,
+        email: data['email'] ?? user.email,
+      );
+    });
+  }
+}
 
   Future<void> detectAndRecommend({bool showMessage = true}) async {
     setState(() => detecting = true);
