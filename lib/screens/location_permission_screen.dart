@@ -32,8 +32,8 @@ class _LocationPermissionScreenState
           const SizedBox(height: 10),
 
           /// 🔹 Header
-          Column(
-            children: const [
+          const Column(
+            children: [
               Icon(Icons.location_on, size: 60, color: Color(0xFF6C63FF)),
               SizedBox(height: 12),
               Text(
@@ -87,7 +87,7 @@ class _LocationPermissionScreenState
           _sectionTitle('Location Accuracy'),
           _card([
             SwitchListTile(
-              activeColor: const Color(0xFF6C63FF),
+              activeThumbColor: const Color(0xFF6C63FF),
               title: const Text(
                 'Precise Location',
                 style: TextStyle(color: Colors.white),

@@ -41,51 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCPMD9F8WdalFNUW-jD-8Vw19EinzQP4Z0',
-    appId: '1:519380064836:web:e3d7a48dc5eec2cffeba11',
-    messagingSenderId: '519380064836',
-    projectId: 'cashbackmax-126eb',
-    authDomain: 'cashbackmax-126eb.firebaseapp.com',
-    storageBucket: 'cashbackmax-126eb.firebasestorage.app',
-    measurementId: 'G-MWQKZMG09R',
+    apiKey: 'AIzaSyDROI6rPQKx2uHrZbS5xTMETHi-3-e1zUk',
+    appId: '1:918477263203:web:001f0ffa5f6a31731b0356',
+    messagingSenderId: '918477263203',
+    projectId: 'cashbackmax-d17de',
+    authDomain: 'cashbackmax-d17de.firebaseapp.com',
+    storageBucket: 'cashbackmax-d17de.firebasestorage.app',
+    measurementId: 'G-0NDXM1TK7R',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAabiVwodPIpBJjjpM75rD_uL-No3XRvYk',
-    appId: '1:519380064836:android:79421634381ef16cfeba11',
-    messagingSenderId: '519380064836',
-    projectId: 'cashbackmax-126eb',
-    storageBucket: 'cashbackmax-126eb.firebasestorage.app',
+    apiKey: 'AIzaSyBl7q8ZLb25snLOcS4htNLu2dF4uj9HWAU',
+    appId: '1:918477263203:android:cde6ba53ee1a69db1b0356',
+    messagingSenderId: '918477263203',
+    projectId: 'cashbackmax-d17de',
+    storageBucket: 'cashbackmax-d17de.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB-RfgKiVXUfQKp3m81ZN7HQprPWwI4rJg',
-    appId: '1:519380064836:ios:9e4906999f18508dfeba11',
-    messagingSenderId: '519380064836',
-    projectId: 'cashbackmax-126eb',
-    storageBucket: 'cashbackmax-126eb.firebasestorage.app',
-    iosClientId: '519380064836-597fisq41v4a7io574aqmar3ut4mdkjs.apps.googleusercontent.com',
+    apiKey: 'AIzaSyA1WEiVcCsNvEmEpsAy042w4C3uw0GuUH4',
+    appId: '1:918477263203:ios:f42ef8983fc45c441b0356',
+    messagingSenderId: '918477263203',
+    projectId: 'cashbackmax-d17de',
+    storageBucket: 'cashbackmax-d17de.firebasestorage.app',
     iosBundleId: 'com.radra.cashbackRewardsPointsMaximiser',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB-RfgKiVXUfQKp3m81ZN7HQprPWwI4rJg',
-    appId: '1:519380064836:ios:477fe9bcd51280b0feba11',
-    messagingSenderId: '519380064836',
-    projectId: 'cashbackmax-126eb',
-    storageBucket: 'cashbackmax-126eb.firebasestorage.app',
-    iosClientId: '519380064836-ut2sd4uk2jfdbjg844i5quh6mgrpgp51.apps.googleusercontent.com',
+    apiKey: 'AIzaSyA1WEiVcCsNvEmEpsAy042w4C3uw0GuUH4',
+    appId: '1:918477263203:ios:587e7bc5b5238bba1b0356',
+    messagingSenderId: '918477263203',
+    projectId: 'cashbackmax-d17de',
+    storageBucket: 'cashbackmax-d17de.firebasestorage.app',
     iosBundleId: 'com.example.cashbackRewardsPointsMaximiser',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCPMD9F8WdalFNUW-jD-8Vw19EinzQP4Z0',
-    appId: '1:519380064836:web:5ba9df174d017b37feba11',
-    messagingSenderId: '519380064836',
-    projectId: 'cashbackmax-126eb',
-    authDomain: 'cashbackmax-126eb.firebaseapp.com',
-    storageBucket: 'cashbackmax-126eb.firebasestorage.app',
-    measurementId: 'G-4RTL2XB5WZ',
+    apiKey: 'AIzaSyDROI6rPQKx2uHrZbS5xTMETHi-3-e1zUk',
+    appId: '1:918477263203:web:831d54b871a10e9f1b0356',
+    messagingSenderId: '918477263203',
+    projectId: 'cashbackmax-d17de',
+    authDomain: 'cashbackmax-d17de.firebaseapp.com',
+    storageBucket: 'cashbackmax-d17de.firebasestorage.app',
+    measurementId: 'G-S3HRR7WQ44',
   );
 
 }

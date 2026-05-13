@@ -197,8 +197,8 @@ class _SignupScreenState extends State<SignupScreen> {
 
                   const SizedBox(height: 22),
 
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Expanded(child: Divider(color: AppColors.bg3)),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 12),

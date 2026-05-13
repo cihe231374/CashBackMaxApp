@@ -2,22 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CLIENT_ID</key>
-	<string>519380064836-597fisq41v4a7io574aqmar3ut4mdkjs.apps.googleusercontent.com</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.519380064836-597fisq41v4a7io574aqmar3ut4mdkjs</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB-RfgKiVXUfQKp3m81ZN7HQprPWwI4rJg</string>
+	<string>AIzaSyA1WEiVcCsNvEmEpsAy042w4C3uw0GuUH4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>519380064836</string>
+	<string>918477263203</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.radra.cashbackRewardsPointsMaximiser</string>
 	<key>PROJECT_ID</key>
-	<string>cashbackmax-126eb</string>
+	<string>cashbackmax-d17de</string>
 	<key>STORAGE_BUCKET</key>
-	<string>cashbackmax-126eb.firebasestorage.app</string>
+	<string>cashbackmax-d17de.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:519380064836:ios:9e4906999f18508dfeba11</string>
+	<string>1:918477263203:ios:f42ef8983fc45c441b0356</string>
 </dict>
 </plist>
